@@ -10,13 +10,13 @@ window.onload = function () {
   setTimeout(() => {
     end_loader();
   }, 500);
-  const loanForm = document.getElementById("calculate-loan-form");
+  const loanForm = document.getElementById("calculate-bill-form");
   loanForm.addEventListener("submit", function (e) {
     e.preventDefault();
     start_loader();
-    const numberUnits = document.getElementById("loan-amount").value;
+    const numberUnits = document.getElementById("units-used").value;
     // const interest = document.getElementById('loan-interest').value;
-    const numberDays = document.getElementById("loan-years").value;
+    const numberDays = document.getElementById("number-days").value;
     var unitsXrate = 0;
     daysXrate = 0;
     (total = 0), (totalInterest = 0), (monthlyInterest = 0);
@@ -30,16 +30,16 @@ window.onload = function () {
         numberUnits
       ).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 });
       // document.getElementById('annual-interest').textContent = parseFloat(interest).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 }) + "%";
-      document.getElementById("loan-terms").textContent = parseFloat(
+      document.getElementById("number-days-display").textContent = parseFloat(
         numberDays
       ).toLocaleString("en-US", {
         style: "decimal",
         maximumFractionDigits: 2,
       });
-      document.getElementById("total-pay").textContent = parseFloat(
+      document.getElementById("total-pay-before-vat").textContent = parseFloat(
         total
       ).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 });
-      document.getElementById("total-interest").textContent = parseFloat(
+      document.getElementById("total-pay-after-vat").textContent = parseFloat(
         total * 0.135 + total
       ).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 });
       document.getElementById("result").style.display = "table";
@@ -52,10 +52,10 @@ window.onload = function () {
     setTimeout(() => {
       document.getElementById("principal").textContent = "";
       // document.getElementById('annual-interest').textContent = ""
-      document.getElementById("loan-terms").textContent = "";
+      document.getElementById("number-days-display").textContent = "";
       // document.getElementById("monthly-pay").textContent = "";
-      document.getElementById("total-pay").textContent = "";
-      document.getElementById("total-interest").textContent = "";
+      document.getElementById("total-pay-before-vat").textContent = "";
+      document.getElementById("total-pay-after-vat").textContent = "";
       document.getElementById("result").style.display = "none";
       document.getElementById("reset-btn").style.display = "none";
       end_loader();

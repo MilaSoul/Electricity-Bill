@@ -20,42 +20,28 @@
       <h1 id="app-title">Electricity Bill Calculator using NW.js Framework</h1>
       <div id="form-holder">
         <div id="main-box">
-          <form action="" id="calculate-loan-form">
+          <form action="" id="calculate-bill-form">
             <div class="form-item">
-              <label for="loan-amount"><b>Number of Units Consumed</b></label>
+              <label for="units-used"><b>Number of Units Consumed</b></label>
               <input
                 type="number"
                 step="any"
                 min="0"
-                name="loan-amount"
-                id="loan-amount"
+                name="units-used"
+                id="units-used"
                 placeholder="xxxxx"
                 class="input-item text-right"
                 required
               />
             </div>
-            <!-- <div class="form-item">
-              <label for="loan-interest"
-                ><b>Enter Loan Interest</b> <small>(%)</small></label
-              >
-              <input
-                type="number"
-                step="any"
-                name="loan-interest"
-                id="loan-interest"
-                placeholder="x"
-                class="input-item text-right"
-                required
-              />
-            </div> -->
             <div class="form-item">
-              <label for="loan-years"><b>Number of Days</b></label>
+              <label for="number-days"><b>Number of Days</b></label>
               <input
                 type="number"
                 step="any"
                 min="1"
-                name="loan-years"
-                id="loan-years"
+                name="number-days"
+                id="number-days"
                 placeholder="x"
                 class="input-item text-right"
                 required
@@ -82,20 +68,30 @@
               </tr>
               <tr>
                 <td class=""><b>Numer of day(s)</b></td>
-                <td class="text-right" id="loan-terms"></td>
+                <td class="text-right" id="number-days-display"></td>
               </tr>
               <tr>
                 <td class=""><b>Total Cost Before VAT</b></td>
-                <td class="text-right" id="total-pay"></td>
+                <td class="text-right" id="total-pay-before-vat"></td>
               </tr>
               <tr>
                 <td class=""><b>Total Cost After VAT</b></td>
-                <td class="text-right" id="total-interest"></td>
+                <td class="text-right" id="total-pay-after-vat"></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
+      <a href="https://github.com/MilaSoul/wekk11">
+        <img
+          alt="link to gihub repository"
+          src="./images/githubicon.png"
+          width="115"
+          height="115"
+          target="_blank"
+          class="imageLink"
+        />
+      </a>
     </main>
   </body>
 </html>
