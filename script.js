@@ -10,12 +10,11 @@ window.onload = function () {
   setTimeout(() => {
     end_loader();
   }, 500);
-  const loanForm = document.getElementById("calculate-bill-form");
-  loanForm.addEventListener("submit", function (e) {
+  const billForm = document.getElementById("calculate-bill-form");
+  billForm.addEventListener("submit", function (e) {
     e.preventDefault();
     start_loader();
     const numberUnits = document.getElementById("units-used").value;
-    // const interest = document.getElementById('loan-interest').value;
     const numberDays = document.getElementById("number-days").value;
     var unitsXrate = 0;
     daysXrate = 0;
@@ -24,12 +23,10 @@ window.onload = function () {
     unitsXrate = parseFloat(numberUnits) * 0.2;
     daysXrate = parseFloat(numberDays) * 0.04;
     total = unitsXrate + daysXrate;
-    //totalInterest = parseFloat(total) - parseFloat(principalAmount);
     setTimeout(() => {
       document.getElementById("principal").textContent = parseFloat(
         numberUnits
       ).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 });
-      // document.getElementById('annual-interest').textContent = parseFloat(interest).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 }) + "%";
       document.getElementById("number-days-display").textContent = parseFloat(
         numberDays
       ).toLocaleString("en-US", {
@@ -51,9 +48,7 @@ window.onload = function () {
     start_loader();
     setTimeout(() => {
       document.getElementById("principal").textContent = "";
-      // document.getElementById('annual-interest').textContent = ""
       document.getElementById("number-days-display").textContent = "";
-      // document.getElementById("monthly-pay").textContent = "";
       document.getElementById("total-pay-before-vat").textContent = "";
       document.getElementById("total-pay-after-vat").textContent = "";
       document.getElementById("result").style.display = "none";
