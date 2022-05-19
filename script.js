@@ -27,7 +27,7 @@ window.onload = function () {
     //displaying info
     setTimeout(() => {
       //display number of units
-      document.getElementById("principal").textContent = parseFloat(
+      document.getElementById("number-units-display").textContent = parseFloat(
         numberUnits
       ).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 });
       //displau numer of days
@@ -55,7 +55,7 @@ window.onload = function () {
   billForm.addEventListener("reset", function (e) {
     start_loader();
     setTimeout(() => {
-      document.getElementById("principal").textContent = "";
+      document.getElementById("number-units-display").textContent = "";
       document.getElementById("number-days-display").textContent = "";
       document.getElementById("total-pay-before-vat").textContent = "";
       document.getElementById("total-pay-after-vat").textContent = "";
