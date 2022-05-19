@@ -17,6 +17,8 @@ window.onload = function () {
     //reading the info from my text input
     const numberUnits = document.getElementById("units-used").value;
     const numberDays = document.getElementById("number-days").value;
+    
+    //initializing variables
     var unitsXrate = 0;
     daysXrate = 0;
     total = 0;
